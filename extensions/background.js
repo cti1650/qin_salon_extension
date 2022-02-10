@@ -1,8 +1,6 @@
 const doScript = (url, tabId) => {
   if (
-    ~url.indexOf('www.wantedly.com') ||
-    ~url.indexOf('www.vorkers.com') ||
-    ~url.indexOf('en-hyouban.com')
+    ~url.indexOf('qin.salon/archives')
   ) {
     chrome.scripting.insertCSS(
       {
