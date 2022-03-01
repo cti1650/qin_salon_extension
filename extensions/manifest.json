@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Qin Salon Extension",
-  "version": "0.0.2",
+  "version": "0.0.87",
   "description": "Qin Salonをより便利にするための拡張機能です",
   "action": {
     "default_title": "Qin Salon Extension"
@@ -12,9 +12,10 @@
   "permissions": [
     "tabs",
     "scripting",
-    "activeTab"
+    "activeTab",
+    "storage"
   ],
   "host_permissions": [
-    "https://qin.salon/*"
+    "*://qin.salon/*"
   ]
 }
