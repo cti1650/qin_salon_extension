@@ -1,4 +1,22 @@
-(() => {
+(async () => {
+  setTimeout(() => {
+    if (window.location.href === "https://qin.salon/archives") {
+      chrome.storage.local.get(["scrollY"], ({ scrollY }) => {
+        if (scrollY === undefined) {
+          scrollY = 0;
+          chrome.storage.local.set({ scrollY });
+        }
+        window.scrollTo(0, scrollY);
+        let tick = setInterval(() => {
+          if (window.location.href === "https://qin.salon/archives") {
+            chrome.storage.local.set({ scrollY: window.scrollY });
+          } else {
+            clearInterval(tick);
+          }
+        }, 1000);
+      });
+    }
+  }, 400);
   setTimeout(() => {
     var dom = document.querySelectorAll(".MuiCard-root");
     if (dom.length == 1) {
@@ -11,12 +29,14 @@
         if (test_key) {
           var content = document.querySelectorAll(".MuiCardContent-root");
           if (content) {
-            const nextPage = test_key.filter((item,index) => (test_key[index - 1]?.url == location.href))[0];
+            const nextPage = test_key.filter(
+              (item, index) => test_key[index - 1]?.url == location.href
+            )[0];
             const div = document.createElement("div");
             div.classList.add("Extension-content");
-            if(!nextPage?.url){
+            if (!nextPage?.url) {
               div.innerHTML = `<div class="Extension-content__item">次の動画はありません。</div>`;
-            }else{
+            } else {
               div.innerHTML = `<div class="Extension-content__item"><a href="${nextPage.url}">${nextPage.title} >> </a></div>`;
             }
             content[1].appendChild(div);
@@ -24,7 +44,7 @@
         }
       });
     }
-  }, 1000);
+  }, 600);
   setTimeout(() => {
     var dom = document.querySelectorAll(".MuiCard-root");
     if (dom.length > 1) {
