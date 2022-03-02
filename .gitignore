@@ -108,3 +108,5 @@ typings/
 extensions/dist
 
 node_modules
+
+.DS_Store
