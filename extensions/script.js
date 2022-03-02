@@ -31,18 +31,18 @@
               (item, index) => test_key[index - 1]?.url == location.href
             )[0];
             const div = document.createElement("div");
-            div.classList.add("Extension-content");
+            div.classList.add("extension-content");
             if (!nextPage?.url) {
-              div.innerHTML = `<div class="Extension-content__item">次の動画はありません。</div>`;
+              div.innerHTML = `<div class="extension-content__item">次の動画はありません。</div>`;
             } else {
-              div.innerHTML = `<div class="Extension-content__item"><a href="${nextPage.url}">${nextPage.title} >> </a></div>`;
+              div.innerHTML = `<div class="extension-content__item"><a href="${nextPage.url}">${nextPage.title} >> </a></div>`;
             }
             content[1].appendChild(div);
           }
         }
       });
     }
-  }, 600);
+  }, 800);
   setTimeout(() => {
     var dom = document.querySelectorAll(".MuiCard-root");
     if (dom.length > 1) {

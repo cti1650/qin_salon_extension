@@ -1,4 +1,4 @@
-div.Extension-content {
+div.extension-content {
   margin-top: 30px;
   padding: 0.5rem;
   height: 50px;
@@ -7,23 +7,23 @@ div.Extension-content {
   align-items: center;
 }
 
-div.Extension-content__item {
+div.extension-content__item {
   height: 100%;
   padding: 0 1.5rem;
 }
 
-div.Extension-content a {
+div.extension-content a {
   display: block;
   height: 100%;
   text-decoration: none;
 }
 
-html[data-theme="light"] div.Extension-content__item,
-html[data-theme="light"] div.Extension-content a {
+html[data-theme="light"] div.extension-content__item,
+html[data-theme="light"] div.extension-content a {
   color: #0000008A;
 }
 
-html[data-theme="dark"] div.Extension-content__item,
-html[data-theme="dark"] div.Extension-content a {
+html[data-theme="dark"] div.extension-content__item,
+html[data-theme="dark"] div.extension-content a {
   color: #FFFFFFB3;
 }
