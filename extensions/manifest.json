@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Qin Salon Extension",
-  "version": "0.0.108",
+  "version": "0.0.110",
   "description": "Qin Salonをより便利にするための拡張機能です",
   "action": {
     "default_title": "Qin Salon Extension"

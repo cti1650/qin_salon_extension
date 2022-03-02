@@ -7,13 +7,11 @@
           chrome.storage.local.set({ scrollY });
         }
         window.scrollTo(0, scrollY);
-        let tick = setInterval(() => {
+        window.addEventListener('scroll', function(){
           if (window.location.href === "https://qin.salon/archives") {
             chrome.storage.local.set({ scrollY: window.scrollY });
-          } else {
-            clearInterval(tick);
           }
-        }, 1000);
+        });
       });
     }
   }, 400);
