@@ -105,8 +105,8 @@ chownr@^1.1.1:
   integrity sha512-jJ0bqzaylmJtVnNgzTeSOs8DPavpbYgEr/b0YL8/2GO3xJEhInFmhKMUnEJQjZumK7KXGFhUy89PrsJWlakBVg==
 
 "chrome_extension_maker_tools@https://github.com/cti1650/chrome_extension_maker_tools":
-  version "0.0.21"
-  resolved "https://github.com/cti1650/chrome_extension_maker_tools#5dd394fe347ce418518c61c64f5d85e9a5e425f9"
+  version "0.0.28"
+  resolved "https://github.com/cti1650/chrome_extension_maker_tools#cd8694944acc516516aaa5fb0ffa8907e96be024"
   dependencies:
     archiver "^5.3.0"
     fs "^0.0.1-security"
